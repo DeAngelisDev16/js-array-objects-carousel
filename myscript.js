@@ -25,3 +25,17 @@ const images = [
        text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
  ];
+
+ /* Milestone 0:
+Popoliamo dinamicamente il contenuto del carosello con i dati forniti dall'array di oggetti,
+dal js (dentro al nostro 'carousel-item', per capirci).
+Milestone 1:
+Al click dell'utente sulle frecce verso l'alto o verso il basso, l'immagine attiva diventerà visibile.
+Milestone 2:
+Aggiungiamo alla visualizzazione delle immagini anche titolo e testo relative alla singola immagine. */
+
+//recupero bottoni di scorrimento dal dom:
+const buttonForward = document.querySelector('.next');
+const buttonPreview = document.querySelector('.previous');
+console.log(buttonForward);
+
