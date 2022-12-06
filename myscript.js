@@ -41,17 +41,22 @@ console.log(buttonForward);
 
 let counterImage = 0;
 
+const myDiv = document.createElement('div');
+
+
 buttonForward.addEventListener('click', function(){
     for(let i = 0; i<images.length; i++){
-        counterImage++;
-        console.log(counterImage);
+        myDiv.innerHTML='< class="my_carousel-item">'
+        '<img src="./img/01.webp" alt="First image">'
+         '</div>'
+        
+        
     }
 });
 
 buttonPreview.addEventListener('click', function(){
     for(let i =4; i<images.length; i--){
-        counterImage--;
-        console.log(counterImage);
+        
     }
 })
 
