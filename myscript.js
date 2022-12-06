@@ -34,8 +34,30 @@ Al click dell'utente sulle frecce verso l'alto o verso il basso, l'immagine atti
 Milestone 2:
 Aggiungiamo alla visualizzazione delle immagini anche titolo e testo relative alla singola immagine. */
 
-//recupero bottoni di scorrimento dal dom:
+
 const buttonForward = document.querySelector('.next');
 const buttonPreview = document.querySelector('.previous');
 console.log(buttonForward);
+
+let counterImage = 0;
+
+buttonForward.addEventListener('click', function(){
+    for(let i = 0; i<images.length; i++){
+        counterImage++;
+        console.log(counterImage);
+    }
+});
+
+buttonPreview.addEventListener('click', function(){
+    for(let i =4; i<images.length; i--){
+        counterImage--;
+        console.log(counterImage);
+    }
+})
+
+
+
+
+
+
 
