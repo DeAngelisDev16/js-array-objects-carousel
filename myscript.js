@@ -34,23 +34,60 @@ Al click dell'utente sulle frecce verso l'alto o verso il basso, l'immagine atti
 Milestone 2:
 Aggiungiamo alla visualizzazione delle immagini anche titolo e testo relative alla singola immagine. */
 
-
+const containerImg = document.querySelector('div.carousel-image');
 const buttonForward = document.querySelector('.next');
 const buttonPreview = document.querySelector('.previous');
 console.log(buttonForward);
+console.log(buttonPreview);
 
-let counterImage = 0;
 
-const myDiv = document.createElement('div');
+let activeIndex = 0;
+
+images.forEach((element) => {
+   containerImg.innerHTML+=
+      `<div class="my_carousel-item">
+         <img src="${element.image}" alt="First image">
+       </div>`
+   
+});
+
+document.getElementsByClassName('my_carousel-item')[activeIndex].classList.add('active');
+
+
 
 
 buttonForward.addEventListener('click', function(){
+   document.querySelector('div.my_carousel-item.active').classList.remove('active');
+
+   if(activeIndex > 4){
+      activeIndex = 0;
+      
+   } else {
+      activeIndex ++;
+   }
+
+   document.getElementsByClassName('my_carousel-item')[activeIndex].classList.add('active');
+
+
     
 });
 
 buttonPreview.addEventListener('click', function(){
-    
+   document.querySelector('div.my_carousel-item.active').classList.remove('active');
+
+   if(activeIndex < 0){
+      activeIndex = 4;
+      
+   } else {
+      activeIndex --;
+   }
+
+   document.getElementsByClassName('my_carousel-item')[activeIndex].classList.add('active');
+
 })
+
+
+  
 
 
 
