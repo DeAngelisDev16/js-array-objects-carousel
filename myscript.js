@@ -56,10 +56,10 @@ document.getElementsByClassName('my_carousel-item')[activeIndex].classList.add('
 
 
 
-buttonForward.addEventListener('click', function(){
+buttonForward.addEventListener(('click'), function(){
    document.querySelector('div.my_carousel-item.active').classList.remove('active');
 
-   if(activeIndex > 4){
+   if(activeIndex >= 4){
       activeIndex = 0;
       
    } else {
@@ -72,10 +72,11 @@ buttonForward.addEventListener('click', function(){
     
 });
 
-buttonPreview.addEventListener('click', function(){
+buttonPreview.addEventListener(('click'), function(){
    document.querySelector('div.my_carousel-item.active').classList.remove('active');
+   
 
-   if(activeIndex < 0){
+   if(activeIndex <= 0){
       activeIndex = 4;
       
    } else {
